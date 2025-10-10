@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Sparkles, Home, ShoppingBag, Calendar } from "lucide-react";
+import { Sparkles, Home, ShoppingBag, Calendar, CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
@@ -49,6 +49,16 @@ const Navigation = () => {
               <Link to="/outfits">
                 <Calendar className="w-4 h-4" />
                 Daily Outfit
+              </Link>
+            </Button>
+            <Button
+              variant={isActive("/planner") ? "default" : "ghost"}
+              asChild
+              className="gap-2"
+            >
+              <Link to="/planner">
+                <CalendarDays className="w-4 h-4" />
+                Planner
               </Link>
             </Button>
           </div>
